@@ -2,13 +2,14 @@ name: Build and push to Docker Hub
 
 on:
   push:
-    [cite_start]branches: ["master"] 
+    branches:
+      - master
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Descargar el código del repo
+      - name: Descargar codigo
         uses: actions/checkout@v4
       
       - name: Login en Docker Hub
